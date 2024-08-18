@@ -3,12 +3,8 @@ updates:
   - package-ecosystem: "maven"
     directory: "/"
     schedule:
-      interval: "daily" # Check for updates daily
-    open-pull-requests-limit: 10 # Limit the number of open PRs from Dependabot
-    target-branch: "release/*" # Target all branches starting with "release/"
+      interval: "daily"
+    open-pull-requests-limit: 10
+    target-branch: "release/*"
     allow:
       - dependency-type: "all"
-        update-type: "version-update:semver-minor" # Only allow minor version updates
-    commit-message:
-      prefix: "fix(deps):"
-      include: "scope"
